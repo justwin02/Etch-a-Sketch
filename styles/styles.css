@@ -4,13 +4,13 @@
 }
 
 body{
+    background: -webkit-linear-gradient(#fefa7c, #ff8d59);
+    background:    -moz-linear-gradient(#fefa7c, #ff8d59);
+    background:         linear-gradient(#fefa7c, #ff8d59);
     padding: 10px 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: -webkit-linear-gradient(#fefa7c, #ff8d59);
-    background:    -moz-linear-gradient(#fefa7c, #ff8d59);
-    background:         linear-gradient(#fefa7c, #ff8d59);
 }
 
 h1{
@@ -18,11 +18,17 @@ h1{
     font-size: 50px;
 }
 
-#container{
+.paint-container{
+    border: 1px solid rgba(218, 217, 217, 0.91);
+    width: 35rem;
+    height: 35rem;
     display: flex;
-    flex-wrap: wrap;
-    width: 600px;
-    height: 600px;
-    border: 2px solid black;
+    flex-direction: column;
+    background-color: white;
 }
 
+/* .row-div{
+    display: flex;
+    flex: row;
+    flex: 1;
+} */

@@ -1,14 +1,23 @@
-const container = document.getElementById('container');
+const container = document.getElementById('paint-container');
+const range = document.getElementById('range');
+const rangeLabel = document.getElementById('rangeText');
 
 function createGrid(size){
-    container.innerHTML = '';
-    const squareSize = 600 / size;
+    rangeLabel.textContent = `${range.value} * ${range.value}`;
+    container.innerHTML = "";
 
-    for(let i = 0; i < size * size; i++){
-        const square = document.createElement('div');
-        square.style.border = '1px solid black';
+    for(let i = 0; i < range.value; i++){
+        const rowTemp = document.createElement("div");
+        rowTemp.classList.add("row-div");
+
+        for(let j = 0; j < range.value; j++){
+            const temp = document.createElement("div");
+            temp.classList.add("paint-wall");
+            rowTemp.appendChild(temp);
+        }
+        container.appendChild(rowTemp);
     }
-
 }
 
-createGrid(16);
+// range.addEventListener("input", createGrid)
+createGrid();
