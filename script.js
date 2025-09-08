@@ -2,7 +2,7 @@ const container = document.getElementById('paint-container');
 const range = document.getElementById('range');
 const rangeLabel = document.getElementById('rangeText');
 
-function createGrid(size){
+function createGrid(){
     rangeLabel.textContent = `${range.value} * ${range.value}`;
     container.innerHTML = "";
 
@@ -19,5 +19,5 @@ function createGrid(size){
     }
 }
 
-// range.addEventListener("input", createGrid)
+range.addEventListener("input", createGrid)
 createGrid();
