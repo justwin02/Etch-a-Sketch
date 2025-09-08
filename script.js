@@ -1,9 +1,13 @@
-const container = document.getElementById('paint-container');
+const container = document.querySelector('.paint-container');
 const range = document.getElementById('range');
-const rangeLabel = document.getElementById('rangeText');
-const tools = document.getElementById('.tool-choice');
-const rainbow = document.getElementById('.random');
+const rangeLabel = document.querySelector('.rangeText');
+const tools = document.querySelectorAll('.tool-choice');
+const rainbow = document.querySelector('.random');
+const colorPicker = document.getElementById('background');
+const reset = document.querySelector('.clean');
 let drawing = false;
+let eraser = false;
+let random = false;
 let color = '#e66565';
 
 tools.forEach(button => {
@@ -14,7 +18,7 @@ tools.forEach(button => {
 })
 
 rainbow.addEventListener("click", () => {
-    random =! random;
+    random != random;
     rainbow.classList.toggle('active');
 })
 
@@ -47,6 +51,12 @@ function createGrid(){
         })
     })
 
+    reset.addEventListener("click", () => {
+        walls.forEach(element => {
+            element.style.backgroundColor = "transparent";
+        })
+    })
+
     document.addEventListener("mouseup", () => {
         drawing = false;
     })
@@ -54,12 +64,14 @@ function createGrid(){
 }
 
 function paintWall(wall){
-    const optionTool = document.querySelectorAll(".tool-choice.active");
+    const optionTool = document.querySelector(".tool-choice.active");
     if(optionTool.dataset.info ==='pencil'){
         if(random === true){
             colorPicker.value = getRandomColor();
         }
-        // wall.style.backgroundColor = "transparent";
+        wall.style.backgroundColor = colorPicker.value;
+    }else{
+        wall.style.backgroundColor = "transparent";
     }
 }
 
