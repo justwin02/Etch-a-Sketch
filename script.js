@@ -2,6 +2,7 @@ const container = document.getElementById('paint-container');
 const range = document.getElementById('range');
 const rangeLabel = document.getElementById('rangeText');
 let drawing = false;
+let color = '#e66565';
 
 function createGrid(){
     rangeLabel.textContent = `${range.value} * ${range.value}`;
