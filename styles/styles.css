@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+html, body{
+    margin: 0;
+    height: 100%;
+}
+
 body{
     background: -webkit-linear-gradient(#fefa7c, #ff8d59);
     background:    -moz-linear-gradient(#fefa7c, #ff8d59);

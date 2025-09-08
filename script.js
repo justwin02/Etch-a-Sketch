@@ -19,5 +19,5 @@ function createGrid(){
     }
 }
 
-range.addEventListener("input", createGrid)
+range.addEventListener("input", createGrid);
 createGrid();
