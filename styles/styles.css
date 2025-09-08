@@ -116,3 +116,8 @@ h2{
 .eraser.active{
     background-color: grey;
 }
+
+.tool-choice.active{
+    background: grey;
+    transform: scale(1.1);
+}
