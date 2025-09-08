@@ -71,3 +71,9 @@ h2{
     align-items: center;
     text-align: center;
 }
+
+.color-choice{
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
