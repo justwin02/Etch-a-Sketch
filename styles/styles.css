@@ -108,3 +108,11 @@ h2{
     justify-content: center;
     background-color: white;
 }
+
+.pencil.active{
+    background-color: grey;
+}
+
+.eraser.active{
+    background-color: grey;
+}
