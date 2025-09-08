@@ -3,6 +3,11 @@ const range = document.getElementById('range');
 const rangeLabel = document.getElementById('rangeText');
 let drawing = false;
 
+function paintWall(wall){
+    const optionTool = document.querySelectorAll(".tool-choice.active");
+
+}
+
 function createGrid(){
     rangeLabel.textContent = `${range.value} * ${range.value}`;
     container.innerHTML = "";
@@ -32,7 +37,10 @@ function createGrid(){
         })
     })
 
-    
+    document.addEventListener("mouseup", () => {
+        drawing = false;
+    })
+
 }
 
 range.addEventListener("input", createGrid);
