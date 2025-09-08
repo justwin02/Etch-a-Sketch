@@ -1,6 +1,7 @@
 const container = document.getElementById('paint-container');
 const range = document.getElementById('range');
 const rangeLabel = document.getElementById('rangeText');
+let drawing = false;
 
 function createGrid(){
     rangeLabel.textContent = `${range.value} * ${range.value}`;
@@ -17,6 +18,21 @@ function createGrid(){
         }
         container.appendChild(rowTemp);
     }
+
+    const walls = document.querySelectorAll(".paint-wall");
+    walls.forEach(element => {
+        element.addEventListener("mousedown", () => {
+            drawing = true;
+            paintWall(element);
+        })
+        element.addEventListener("mouseover", () =>{
+            if(drawing){
+                paintWall(element);
+            }
+        })
+    })
+
+    
 }
 
 range.addEventListener("input", createGrid);
