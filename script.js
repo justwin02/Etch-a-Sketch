@@ -32,7 +32,7 @@ function getRandomColor(){
 }
 
 function createGrid(){
-    rangeLabel.textContent = `${range.value} * ${range.value}`;
+    rangeLabel.textContent = `${range.value} x ${range.value}`;
     container.innerHTML = "";
 
     for(let i = 0; i < range.value; i++){
