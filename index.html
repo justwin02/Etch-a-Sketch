@@ -14,15 +14,19 @@
         <div class="paint-container"></div>
         <div class="tools">
             <h2>Tools</h2>
+            <div class="color">
+                <input type="color" id="background" name="background" value="#e66465" class="color-choice">
+                <label for="background">Choose the Color!</label>
+            </div>
             
+            <div class="range-container">
+                <label for="range" class="rangeText"></label>
+                <input type="range" id="range" min="1" max="64" value="16"/>
+            </div>
+            <button type="button" class="clean option">Clean</button>
+            <button type="button" class="random option">Rainbow Mode</button>
         </div>
-        <div class="range-container">
-            <label for="range" class="rangeText"></label>
-            <input type="range" id="range" min="1" max="64" value="16"/>
-        </div>
-        <button type="button" class="clean option">Clean</button>
     </div>
-    
 
     <script src="script.js"></script>
 </body>
