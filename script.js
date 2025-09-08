@@ -1,8 +1,17 @@
 const container = document.getElementById('paint-container');
 const range = document.getElementById('range');
 const rangeLabel = document.getElementById('rangeText');
+const tools = document.getElementById('.tool-choice');
 let drawing = false;
 let color = '#e66565';
+
+tools.forEach(button => {
+    button.addEventListener("click", () => {
+        tools.forEach(b => b.classList.remove("active"));
+        button.classList.add("active")
+    })
+})
+
 
 function createGrid(){
     rangeLabel.textContent = `${range.value} * ${range.value}`;
