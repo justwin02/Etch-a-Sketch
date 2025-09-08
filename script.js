@@ -2,6 +2,7 @@ const container = document.getElementById('paint-container');
 const range = document.getElementById('range');
 const rangeLabel = document.getElementById('rangeText');
 const tools = document.getElementById('.tool-choice');
+const rainbow = document.getElementById('.random');
 let drawing = false;
 let color = '#e66565';
 
@@ -12,6 +13,10 @@ tools.forEach(button => {
     })
 })
 
+rainbow.addEventListener("click", () => {
+    random =! random;
+    rainbow.classList.toggle('active');
+})
 
 function createGrid(){
     rangeLabel.textContent = `${range.value} * ${range.value}`;
@@ -54,6 +59,7 @@ function paintWall(wall){
         if(random === true){
             colorPicker.value = getRandomColor();
         }
+        // wall.style.backgroundColor = "transparent";
     }
 }
 
